@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var buttonText = "Search"
+    @State private var checkingText = "Search checking"
+    @State private var randomValue = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            BackgroundView()
+            
+            VStack {
+                HeaderView()
+                
+                Spacer()
+                
+                GaugeWithArrowView(value: randomValue)
+                
+                Text(checkingText)
+                    .foregroundColor(.white)
+                    .fontWeight(.medium)
+                    .padding(30)
+                
+                Spacer()
+                
+                SearchButtonView(buttonText: $buttonText, checkingText: $checkingText, randomValue: $randomValue)
+                
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

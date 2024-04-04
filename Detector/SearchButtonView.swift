@@ -35,7 +35,3 @@ struct SearchButtonView: View {
         .padding(.bottom)
     }
 }
-
-//#Preview {
-//    SearchButtonView(buttonText: <#Binding<String>#>, checkingText: <#Binding<String>#>, randomValue: <#Binding<Int>#>)
-//}

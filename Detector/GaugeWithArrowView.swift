@@ -36,7 +36,3 @@ struct GaugeWithArrowView: View {
         .padding(.top, 200)
     }
 }
-
-//#Preview {
-//    GaugeWithArrowView()
-//}
